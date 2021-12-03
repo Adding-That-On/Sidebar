@@ -1,0 +1,48 @@
+{
+
+  "name": "Sidebar",
+  "description": "Easily open your favourite websites from the sidebar in Microsoft Edge!",
+  "version": "1.0.5",
+  "manifest_version": 2,
+  "default_locale": "en",
+  "icons": {
+    "32": "assets/32.png",
+    "64": "assets/64.png",
+    "128": "assets/128.png"
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "bookmarks",
+    "notifications",
+    "chrome://favicon/*",
+    "<all_urls>"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "options_page": "./settings.html",
+  "browser_action": {
+    "default_title": "__MSG_title__"
+  },
+  "background": {
+    "scripts": [
+      "./js/background_offset.js",
+      "./js/background.js"
+    ]
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": [
+      "js/content.js",
+      "assets/static/jquery-3.3.1.min.js",
+      "js/content_offset.js"
+    ],
+    "run_at": "document_start"
+  }],
+
+  "web_accessible_resources": [
+    "assets/*.svg",
+    "assets/*.png",
+    "assets/*.css",
+    "assets/*.otf"
+  ]
+}
