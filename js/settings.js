@@ -24037,6 +24037,11 @@
                     title: "YouTube",
                     url: "https://www.youtube.com/",
                     picked: !1
+                }, {
+                    img: "gservices/meet.png",
+                    title: "Meet",
+                    url: "https://www.meet.google.com/",
+                    picked: !1
                 } ],
                 streaming: [ {
                     img: "streaming/amazon-prime.png",
