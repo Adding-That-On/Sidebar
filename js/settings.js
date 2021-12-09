@@ -24040,7 +24040,7 @@
                 }, {
                     img: "gservices/meet.png",
                     title: "Meet",
-                    url: "https://www.meet.google.com/",
+                    url: "https://meet.google.com/",
                     picked: !1
                 } ],
                 streaming: [ {
