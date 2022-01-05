@@ -14,7 +14,6 @@ jobs:
        
      - name: Build
        run: |
-         cd "%programfiles%\WinRAR"
          rar a -r D:\a\Sidebar\Sidebar\Build\Sidebar_latest.zip D:\a\Sidebar\Sidebar\*
        shell: powershell
         
