@@ -13,7 +13,9 @@ jobs:
        run: date +%s > report.txt
        
      - name: Build
-       run: Compress-Archive -Path D:\a\Sidebar\Sidebar\ -Update -DestinationPath D:\a\Sidebar\Sidebar\Build\Sidebar_latest.zip
+       run: |
+         cd "%programfiles%\WinRAR"
+         rar a -r D:\a\Sidebar\Sidebar\Build\Sidebar_latest.zip D:\a\Sidebar\Sidebar\*
        shell: powershell
         
      - name: Commit report
