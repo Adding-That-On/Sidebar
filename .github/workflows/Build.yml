@@ -14,9 +14,9 @@ jobs:
        
      - name: Build
        run: |
-         cd "C:\"Program Files\WinRAR"
+         cd "C:\Program Files\WinRAR"
          rar a -r D:\a\Sidebar\Sidebar\Build\Sidebar_latest.zip D:\a\Sidebar\Sidebar\*
-       shell: cmd
+       shell: powershell
         
      - name: Commit report
        run: |
