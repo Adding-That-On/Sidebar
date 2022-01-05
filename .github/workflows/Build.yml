@@ -5,15 +5,15 @@ on:
   pull_request:
 
 jobs:
- report:
+ build:
     runs-on: windows-latest
     steps:
      - uses: actions/checkout@v2
      - name: Create report file
        run: date +%s > report.txt
        
-     - name: Building the installer
-       run: Compress-Archive -LiteralPath D:\a\Sidebar\Sidebar\ -DestinationPath D:\a\Sidebar\Sidebar\Build\Sidebar_latest.zip
+     - name: Build
+       run: Compress-Archive -LiteralPath D:\a\Sidebar\Sidebar\* -DestinationPath D:\a\Sidebar\Sidebar\Build\Sidebar_latest.zip
        shell: powershell
         
      - name: Commit report
