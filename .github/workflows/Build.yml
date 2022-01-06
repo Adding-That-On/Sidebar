@@ -17,9 +17,10 @@ jobs:
        with:
          type: 'zip'
          filename: 'Sidebar_latest.zip'
-         path: '.'
-         directory: './Build/'
 
+     - name: Move to "Build" directory
+       run: move D:\a\Sidebar\Sidebar\Sidebar_latest.zip D:\a\Sidebar\Sidebar\Build\
+       
      - name: Commit report
        run: |
           git config --global user.name 'Minionguyjpro'
