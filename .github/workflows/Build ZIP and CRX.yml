@@ -44,6 +44,7 @@ jobs:
        run: |
            git config --global user.name 'Minionguyjpro'
            git config --global user.email 'minionguyjpro@users.noreply.github.com'
+           cd D:\a\Sidebar\Sidebar\
            git pull origin --rebase origin main
     
      - uses: actions/checkout@v2
