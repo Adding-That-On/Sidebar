@@ -9,7 +9,7 @@ on:
  pull_request:
 
 jobs:
- build-zip:
+ build-crx:
     runs-on: windows-latest
     steps:
      - uses: actions/checkout@v2
@@ -36,36 +36,6 @@ jobs:
           git config --global user.name 'Minionguyjpro'
           git config --global user.email 'minionguyjpro@users.noreply.github.com'
           git add -A
+          git push
           git commit -am "Made new build"
-          
-          git push         
-
- build-crx:
-    runs-on: ubuntu-latest
-    needs: build-zip
-    steps:   
-     - uses: actions/checkout@v2
-     - name: Create report file
-       run: date +%s > report.txt
-       
-     - name: Delete old Archive
-       run: rm "D:\a\Sidebar\Sidebar\Build\Sidebar_latest.crx"
-    
-     - name: Archive Release
-       uses: thedoctor0/zip-release@master
-       with:
-         type: 'zip'
-         filename: 'Sidebar_latest.crx'
-         exclusions: '*.git* ./Build/ README.md report.txt'
-
-     - name: Move to "Build" directory
-       run: move /y D:\a\Sidebar\Sidebar\Sidebar_latest.crx D:\a\Sidebar\Sidebar\Build\
-       shell: cmd
-       
-     - name: Commit report
-       run: |
-          git config --global user.name 'Minionguyjpro'
-          git config --global user.email 'minionguyjpro@users.noreply.github.com'
-          git add -A
-          git commit -am "Made new build"
-          git push         
+     
