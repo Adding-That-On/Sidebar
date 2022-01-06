@@ -11,12 +11,14 @@ jobs:
      - uses: actions/checkout@v2
      - name: Create report file
        run: date +%s > report.txt
-
-     - name: Compress
-       uses: TonyBogdanov/zip@1.0
+    
+     - name: Archive Release
+       uses: thedoctor0/zip-release@master
        with:
-           args: zip -qq -r ./Build/Sidebar_latest.zip -i ./
-     
+         type: 'zip'
+         filename: 'Sidebar_latest.zip'
+         directory: './Build/'
+
      - name: Commit report
        run: |
           git config --global user.name 'Minionguyjpro'
