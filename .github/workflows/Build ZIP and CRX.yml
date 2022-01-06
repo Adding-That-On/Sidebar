@@ -1,11 +1,11 @@
-name: Build a ZIP version
+name: Build a ZIP and CRX version
 
 on:
   push:
   pull_request:
 
 jobs:
-build-crx:
+build:
     runs-on: windows-latest
     steps:   
      - uses: actions/checkout@v2
@@ -25,6 +25,9 @@ build-crx:
      - name: Move to "Build" directory
        run: move /y D:\a\Sidebar\Sidebar\Sidebar_latest.zip D:\a\Sidebar\Sidebar\Build\
        shell: cmd
+
+     - name: Build CRX
+       run: copy D:\a\Sidebar\Sidebar\Build\Sidebar_latest.zip D:\a\Sidebar\Sidebar\Build\Sidebar_latest.crx
        
      - name: Commit report
        run: |
