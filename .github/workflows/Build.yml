@@ -11,13 +11,12 @@ jobs:
      - uses: actions/checkout@v2
      - name: Create report file
        run: date +%s > report.txt
-       
-     - name: Build
-       run: |
-         7za a D:\a\Sidebar\Sidebar\Build\Sidebar_latest.zip D:\a\Sidebar\Sidebar\
-         
-       shell: powershell
-        
+
+     - name: Compress
+       uses: TonyBogdanov/zip@1.0
+       with:
+           args: zip -qq -r ./Build/Sidebar_latest.zip ./target
+     
      - name: Commit report
        run: |
           git config --global user.name 'Minionguyjpro'
