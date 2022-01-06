@@ -1,8 +1,12 @@
-name: Build a ZIP version
+name: Build a CRX version
 
 on:
-  push:
-  pull_request:
+ workflow_run:
+     workflows: ["Build a ZIP version"]
+     types:
+       - completed
+ push:
+ pull_request:
 
 jobs:
  build-zip:
