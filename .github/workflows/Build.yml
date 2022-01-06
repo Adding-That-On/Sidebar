@@ -11,13 +11,16 @@ jobs:
      - uses: actions/checkout@v2
      - name: Create report file
        run: date +%s > report.txt
+       
+     - name: Delete old Archive
+     - run: del "D:\a\Sidebar\Sidebar\Build\Sidebar_latest.zip"
     
      - name: Archive Release
        uses: thedoctor0/zip-release@master
        with:
          type: 'zip'
          filename: 'Sidebar_latest.zip'
-         exclusions: '/.github/* /.git/* /Build/* README.md report.txt'
+         exclusions: '*.git* /*Build/* README.md report.txt'
 
      - name: Move to "Build" directory
        run: move /y D:\a\Sidebar\Sidebar\Sidebar_latest.zip D:\a\Sidebar\Sidebar\Build\
