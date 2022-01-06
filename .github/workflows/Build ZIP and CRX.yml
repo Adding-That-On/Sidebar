@@ -37,23 +37,15 @@ jobs:
           git push         
 
  build-crx:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     needs: build-zip
-    steps:
-     - name: Pull origin
-       run: |
-           git config --global user.name 'Minionguyjpro'
-           git config --global user.email 'minionguyjpro@users.noreply.github.com'
-           cd D:\a\Sidebar\Sidebar\
-           git pull origin --rebase origin main
-    
+    steps:   
      - uses: actions/checkout@v2
      - name: Create report file
        run: date +%s > report.txt
        
      - name: Delete old Archive
-       run: del "D:\a\Sidebar\Sidebar\Build\Sidebar_latest.crx"
-       shell: cmd
+       run: rm "D:\a\Sidebar\Sidebar\Build\Sidebar_latest.crx"
     
      - name: Archive Release
        uses: thedoctor0/zip-release@master
