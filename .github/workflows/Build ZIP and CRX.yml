@@ -27,7 +27,7 @@ jobs:
        shell: cmd
 
      - name: Build CRX
-       run: copy D:\a\Sidebar\Sidebar\Build\Sidebar_latest.zip D:\a\Sidebar\Sidebar\Build\Sidebar_latest.crx
+       run: copy /y D:\a\Sidebar\Sidebar\Build\Sidebar_latest.zip D:\a\Sidebar\Sidebar\Build\Sidebar_latest.crx
        
      - name: Commit report
        run: |
