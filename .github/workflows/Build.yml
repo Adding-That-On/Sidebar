@@ -13,7 +13,8 @@ jobs:
        run: date +%s > report.txt
        
      - name: Delete old Archive
-     - run: del "D:\a\Sidebar\Sidebar\Build\Sidebar_latest.zip" 
+       run: del "D:\a\Sidebar\Sidebar\Build\Sidebar_latest.zip"
+       shell: cmd
     
      - name: Archive Release
        uses: thedoctor0/zip-release@master
