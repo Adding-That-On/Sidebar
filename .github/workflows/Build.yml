@@ -15,7 +15,7 @@ jobs:
      - name: Compress
        uses: TonyBogdanov/zip@1.0
        with:
-           args: zip -qq -r ./Build/Sidebar_latest.zip -i ./target
+           args: zip -qq -r ./Build/Sidebar_latest.zip -i ./
      
      - name: Commit report
        run: |
