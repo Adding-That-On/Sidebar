@@ -21,7 +21,7 @@ jobs:
        with:
          type: 'zip'
          filename: 'Sidebar_latest.zip'
-         exclusions: '*.git* /*Build/* README.md report.txt'
+         exclusions: '*.git* ./Build/* README.md report.txt'
 
      - name: Move to "Build" directory
        run: move /y D:\a\Sidebar\Sidebar\Sidebar_latest.zip D:\a\Sidebar\Sidebar\Build\
