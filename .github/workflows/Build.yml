@@ -17,9 +17,10 @@ jobs:
        with:
          type: 'zip'
          filename: 'Sidebar_latest.zip'
+         exclusions: '/*.github/* /*.git/* README.md'
 
      - name: Move to "Build" directory
-       run: move D:\a\Sidebar\Sidebar\Sidebar_latest.zip D:\a\Sidebar\Sidebar\Build\
+       run: move D:\a\Sidebar\Sidebar\Sidebar_latest.zip D:\a\Sidebar\Sidebar\Build\ -y
        shell: cmd
        
      - name: Commit report
