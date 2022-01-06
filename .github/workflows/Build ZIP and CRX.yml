@@ -38,6 +38,7 @@ jobs:
 
  build-crx:
     runs-on: windows-latest
+    needs: build-zip
     steps:
      - uses: actions/checkout@v2
      - name: Create report file
