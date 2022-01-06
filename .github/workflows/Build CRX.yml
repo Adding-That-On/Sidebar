@@ -26,7 +26,11 @@ jobs:
      - name: Move to "Build" directory
        run: move /y D:\a\Sidebar\Sidebar\Sidebar_latest.crx D:\a\Sidebar\Sidebar\Build\
        shell: cmd
-       
+
+     - name: Wait for 12 seconds
+       run: Start-Sleep -s 12
+       shell: powershell
+  
      - name: Commit report
        run: |
           git config --global user.name 'Minionguyjpro'
