@@ -17,6 +17,7 @@ jobs:
        with:
          type: 'zip'
          filename: 'Sidebar_latest.zip'
+         path: '.'
          directory: './Build/'
 
      - name: Commit report
