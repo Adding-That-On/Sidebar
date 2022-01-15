@@ -30,6 +30,18 @@ jobs:
        run: copy /y D:\a\Sidebar\Sidebar\build\Sidebar_latest.zip D:\a\Sidebar\Sidebar\build\Sidebar_latest.crx
        shell: cmd
        
+     - name: Upload Sidebar ZIP Build Artifact
+       uses: actions/upload-artifact@v2
+       with:
+         name: Sidebar Latest Beta ZIP
+         path: D:\a\Sidebar\Sidebar\build\Sidebar_latest.zip
+         
+     - name: Upload Sidebar CRX Build Artifact
+       uses: actions/upload-artifact@v2
+       with:
+         name: Sidebar Latest Beta CRX
+         path: D:\a\Sidebar\Sidebar\build\Sidebar_latest.crx
+       
      - name: Commit report
        run: |
           git config --global user.name 'Minionguyjpro'
