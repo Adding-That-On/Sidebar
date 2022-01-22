@@ -13339,6 +13339,11 @@
                 url: "https://chrome.google.com/webstore/category/extensions",
                 picked: !1
             }, {
+                img: "gservices/hangouts.png",
+                title: "Hangouts",
+                url: "https://hangouts.google.com/",
+                picked: !1
+            }, {
                 img: "gservices/docs.png",
                 title: "Docs",
                 url: "https://docs.google.com/document",
@@ -13346,7 +13351,7 @@
             }, {
                 img: "gservices/drive.png",
                 title: "Drive",
-                url: "https://drive.google.com/drive/",
+                url: "https://drive.google.com/drive",
                 picked: !1
             }, {
                 img: "gservices/forms.png",
