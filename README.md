@@ -11,4 +11,4 @@ All bookmarks are in the sidebar that you can easily access with one move on the
 ![Sidebar image 1](https://user-images.githubusercontent.com/66115754/149611909-ce6ed446-695b-4e1f-8669-869e4ee3d41b.png)
 ![Sidebar image 2](https://user-images.githubusercontent.com/66115754/149611911-1ae29e5c-f996-45f2-bc89-1a4bf873fdde.png)
 # Credits
-We did not officially made this, but [romsiubsass](mailto:romsiubsass@gmail.com) was the original developer of it and has the official version (v1.0.4) in the Chrome Web Store [here](https://chrome.google.com/webstore/detail/sidebar-apps-and-bookmark/afdfpkhbdpioonfeknablodaejkklbdn). This modified version is better and more up-to-date than the original one. The site [sidebar.li](https://sidebar.li)
+We did not officially made this, but [romsiubsass](mailto:romsiubsass@gmail.com) was the original developer of it and has the official version (v1.0.4) in the Chrome Web Store [here](https://chrome.google.com/webstore/detail/sidebar-apps-and-bookmark/afdfpkhbdpioonfeknablodaejkklbdn). This modified version is better and more up-to-date than the original one. The site [sidebar.li](https://sidebar.li) is from him/them.
